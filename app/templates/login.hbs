@@ -1,8 +1,10 @@
 <div class="container">
-  <form class="highlight-module--inline highlight-module--custom g--third g--centered">
+  <form class="highlight-module--inline highlight-module--custom g--third g--centered" {{action "authenticate" on="submit"}}>
     <h3 class="highlight-module__title">Welcome</h3>
-    <p class="color--danger qa-message">You entered incorrect credentials</p>
-    {{input placeholder="username" value=username class="qa-username"}}
+    {{#if loginError}}
+      <p class="color--danger qa-message">You entered incorrect credentials</p>
+    {{/if}}
+    {{input placeholder="username" value=identification class="qa-username"}}
     {{input placeholder="password" type="password" value=password class="qa-password"}}
     {{input type="submit" value="login" class="button--custom qa-submit"}}
   </form>

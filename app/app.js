@@ -11,7 +11,7 @@ var App = Ember.Application.extend({
 });
 
 // Prentender mocks for actors, movies and session
-var loggedIn = true,
+var loggedIn = false,
   FIXTURES = {
     'actors': [
       { id: '1', name: 'Sylvester Stallone', age: 68},
