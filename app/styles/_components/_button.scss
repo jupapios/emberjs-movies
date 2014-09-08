@@ -57,5 +57,5 @@
 
 .button--custom {
   @extend .button;
-  @include style-button(#ffffff, $colorTurquoise);
+  @include style-button($colorTurquoise, #ffffff);
 }

@@ -1,0 +1,17 @@
+/**
+*
+* Form
+*
+**/
+
+input {
+  border: 0;
+  border-bottom: 1px solid $colorTurquoise;
+  border-radius: 0;
+  padding: 12px;
+  width: 100%;
+}
+
+input:first-of-type {
+  margin-top: 1em;
+}
