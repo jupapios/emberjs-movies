@@ -1,15 +1,19 @@
+import Ember from 'ember';
 import {
   moduleForModel,
   test
 } from 'ember-qunit';
 
-moduleForModel('movie', 'Movie', {
-  // Specify the other units that are required for this test.
-  needs: []
+moduleForModel('movie', 'Movie Model', {
+  needs: ['model:actor']
 });
 
-test('it exists', function() {
-  var model = this.subject();
-  // var store = this.store();
-  ok(model);
+test('actor relationship', function() {
+  expect(2);
+
+  var Movie = this.store().modelFor('movie');
+  var relationship = Ember.get(Movie, 'relationshipsByName').get('actors');
+
+  equal(relationship.key, 'actors');
+  equal(relationship.kind, 'hasMany');
 });

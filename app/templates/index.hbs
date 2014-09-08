@@ -1,0 +1,9 @@
+<h3>Movies</h3>
+{{#each movies}}
+  {{#link-to 'movie' this}}{{title}}{{/link-to}}
+{{/each}}
+
+<h3>Actors</h3>
+{{#each actors}}
+  {{name}}
+{{/each}}
