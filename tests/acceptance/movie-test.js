@@ -26,7 +26,13 @@ test('it contains the details', function() {
     equal(score, '89%');
     equal(date, '05/27/2014');
   });
+});
 
+test('it lists the actors', function() {
+  goToMovie();
+  andThen(function() {
+    ok(find('.qa-actors-list li').length > 0);
+  });
 });
 
 test('it contains the Main page link', function() {
