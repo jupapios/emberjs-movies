@@ -1,7 +1,7 @@
-/* globals Pretender */
 import Ember from 'ember';
 import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
+import Pretender from 'pretender';
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
